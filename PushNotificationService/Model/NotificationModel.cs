@@ -10,5 +10,7 @@ namespace PushNotificationService.Model
         public string FcmToken { get; set; }
         public string Body { get; set; }
         public string SchoolLogo { get; set; }
+        public string Title { get; set; }
+        public long Id { get; set; }
     }
 }

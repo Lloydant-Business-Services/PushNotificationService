@@ -28,11 +28,11 @@ namespace PushNotificationService.Controllers
  
                 Objectsformessage.Add("PictureUrl", item.SchoolLogo);
 
-          
+                Objectsformessage.Add("Id", $"{item.Id}");
 
                 if (item.FcmToken != "")
                 {
-                    await _firebasefcm.SendNotification(item.FcmToken, "AnnounceMents", item.Body, Objectsformessage);
+                    await _firebasefcm.SendNotification(item.FcmToken, item.Title, item.Body, Objectsformessage);
                 }
             }
             return true;
