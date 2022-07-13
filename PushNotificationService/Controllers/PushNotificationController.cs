@@ -14,28 +14,38 @@ namespace PushNotificationService.Controllers
     public class PushNotificationController : ControllerBase
     {
         private readonly IFirebaseConnector _firebasefcm;
+
         public PushNotificationController(IFirebaseConnector firebasefcm)
         {
             _firebasefcm = firebasefcm;
+
         }
         [HttpPost]
         public async Task<bool> Push(IList<NotificationModel> model)
         {
             foreach (var item in model)
             {
-                Dictionary<string, string> Objectsformessage = new Dictionary<string, string>();
-
- 
-                Objectsformessage.Add("PictureUrl", item.SchoolLogo);
-
-                Objectsformessage.Add("Id", $"{item.Id}");
-
-                if (item.FcmToken != "")
+                try
                 {
-                    await _firebasefcm.SendNotification(item.FcmToken, item.Title, item.Body, Objectsformessage);
+                    Dictionary<string, string> Objectsformessage = new Dictionary<string, string>();
+
+
+                    Objectsformessage.Add("PictureUrl", item.SchoolLogo);
+
+                    Objectsformessage.Add("Id", $"{item.Id.ToString()}");
+
+                    if (item.FcmToken != "")
+                    {
+                        await _firebasefcm.SendNotification(item.FcmToken, item.Title, item.Body, Objectsformessage);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    continue;
                 }
             }
             return true;
         }
+     
     }
 }

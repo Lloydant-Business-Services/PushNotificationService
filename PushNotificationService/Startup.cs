@@ -33,6 +33,7 @@ namespace PushNotificationService
 
             services.AddControllers();
             services.AddSingleton<IFirebaseConnector, FirebaseConnector>();
+            services.AddSingleton<IlaroIFirebaseConnector, IlaroFirebaseConnector>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PushNotificationService", Version = "v1" });

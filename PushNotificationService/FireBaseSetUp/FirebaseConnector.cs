@@ -15,37 +15,48 @@ namespace PushNotificationService.FireBaseSetUp
       
         public FirebaseConnector()
         {
-            
+           // "ConfigFiles/absu-e3ea9-firebase-adminsdk-jkwsb-bd3aa866dc.json"
+            //var app = FirebaseApp.Create(new AppOptions() { Credential = GoogleCredential.FromFile(ConfigPath).CreateScoped("https://www.googleapis.com/auth/firebase.messaging") });
+            //messaging = FirebaseMessaging.GetMessaging(app);
             var app = FirebaseApp.Create(new AppOptions() { Credential = GoogleCredential.FromFile("absu-e3ea9-firebase-adminsdk-jkwsb-bd3aa866dc.json").CreateScoped("https://www.googleapis.com/auth/firebase.messaging") });
             messaging = FirebaseMessaging.GetMessaging(app);
-           
+
+
         }
 
         private Message CreateNotification(string title, string notificationBody, string token,Dictionary<string,string> keypairs)
         {
-            return new Message()
+            try
             {
-                Token = token,
-                Data = keypairs,
-                
-                Notification = new Notification()
+                return new Message()
                 {
-                    Body = notificationBody,
-                    Title = title,
-                    
-                },
-                Android = new AndroidConfig()
-                {
-                    Priority = Priority.High,
-                    Notification = new AndroidNotification()
+
+                    Token = token,
+                    Data = keypairs,
+
+                    Notification = new Notification()
                     {
-                        Sound = "default",
-                        Color = "#CA3434",
-                       // ImageUrl = baseUrl + "Images/ProfilePictures/Avatar.jpg"
-                    }
-                },
-               
-            };
+                        Body = notificationBody,
+                        Title = title,
+
+                    },
+                    Android = new AndroidConfig()
+                    {
+                        Priority = Priority.High,
+                        Notification = new AndroidNotification()
+                        {
+                            Sound = "default",
+                            Color = "#1d1072",
+                            // ImageUrl = baseUrl + "Images/ProfilePictures/Avatar.jpg"
+                        }
+                    },
+
+                };
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
         }
   
 

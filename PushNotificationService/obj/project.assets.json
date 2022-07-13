@@ -504,7 +504,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Wille\\.nuget\\packages\\": {},
+    "C:\\Users\\ogboc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
@@ -512,11 +512,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wille\\source\\repos\\PushNotificationService\\PushNotificationService\\PushNotificationService.csproj",
+      "projectUniqueName": "D:\\repos\\PushNotificationService\\PushNotificationService\\PushNotificationService.csproj",
       "projectName": "PushNotificationService",
-      "projectPath": "C:\\Users\\Wille\\source\\repos\\PushNotificationService\\PushNotificationService\\PushNotificationService.csproj",
-      "packagesPath": "C:\\Users\\Wille\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wille\\source\\repos\\PushNotificationService\\PushNotificationService\\obj\\",
+      "projectPath": "D:\\repos\\PushNotificationService\\PushNotificationService\\PushNotificationService.csproj",
+      "packagesPath": "C:\\Users\\ogboc\\.nuget\\packages\\",
+      "outputPath": "D:\\repos\\PushNotificationService\\PushNotificationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -524,7 +524,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Wille\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ogboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -534,8 +534,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/dkUcrpvyhRoeABwDeEYJiAbTFkf5ulW9ladMZlP7jfVGPbBru8/api": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Users\\ogboc\\Downloads\\telerik": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -580,7 +581,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
       }
     }
   }
